@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /easteregg
+
+Sitemap: https://herzjesuball.com/sitemap.xml
+
+# Wer schaut bitte freiwillig in eine robots.txt?? Such dir Hobbies!
+# Aber gut: Neugier wird belohnt. Schau mal, wo Crawler nicht hindürfen. ;)
+# - LG Ballkomitee, 3 Uhr in der Nacht

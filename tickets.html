@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#080827">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Tickets für den Herz-Jesu Ball 2026: online kaufen oder ohne Konto reservieren.">
+  <title>Tickets · Herz-Jesu Ball 2026</title>
+  <link rel="icon" href="favicon.ico?v=4" sizes="48x48">
+  <link rel="icon" href="assets/favicon-48-light.png?v=4" sizes="48x48" type="image/png" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/favicon-48.png?v=4" sizes="48x48" type="image/png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="site.webmanifest?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Herr+Von+Muellerhoff&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=32">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="nav">
+    <nav class="nav__inner container" aria-label="Hauptnavigation">
+      <a class="nav__brand" href="." aria-label="Carpe Noctem – Herz-Jesu Ball, Startseite">
+        <img class="nav__logo" src="assets/logo.webp" alt="" width="900" height="696">
+      </a>
+      <button class="nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="infos.html">Infos &amp; FAQ</a></li>
+        <li><a href="ablauf.html">Ablauf</a></li>
+        <li><a href="location.html">Location &amp; Anreise</a></li>
+        <li><a href="komitee.html">Komitee</a></li>
+        <li><a href="sponsoren.html">Sponsoren</a></li>
+        <li><a class="nav__cta" data-ticket href="tickets.html" aria-current="page">Tickets sichern</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="pagehead container">
+      <h1 class="section__title section__title--gold">Tickets</h1>
+    </header>
+
+    <section class="section section--tight container rsv">
+      <!-- Auswahl: Online als Hauptweg, Reservieren als ruhige Alternative -->
+      <div class="rsv-choices" id="rsvChoices">
+        <a class="btn btn--primary rsv-online" id="rsvOnline" href="https://www.my-ticket.shop/events/herz-jesu-ball-2026-zentrum-f-r-visionen-hotel-a4n09Grv" rel="noopener noreferrer">Online kaufen →</a>
+        <p class="rsv-online-note">Bezahlen mit Kreditkarte, Klarna oder EPS. Du brauchst nur ein Konto auf <span class="rsv-nowrap">my-ticket.shop</span> und hast in 5&nbsp;Minuten dein Ticket.</p>
+
+        <div class="rsv-alt" id="rsvAlt" hidden>
+          <div class="rsv-divider" aria-hidden="true"><span></span><em>oder</em><span></span></div>
+          <h2 class="rsv-alt__title">An der Abendkasse reservieren</h2>
+          <p class="rsv-alt__text">Ohne Kreditkarte und ohne Konto: Reserviere deine Karten auf deinen Namen. Am Ballabend liegen sie an der Abendkasse für dich bereit, und du zahlst dort den Vorverkaufspreis von 35&nbsp;€ statt 38&nbsp;€, bar oder mit Karte.</p>
+          <button type="button" class="btn btn--ghost rsv-alt__btn" id="rsvStart">Abendkasse reservieren →</button>
+        </div>
+      </div>
+
+      <!-- Reservierung -->
+      <form class="rsv-flow" id="rsvForm" novalidate hidden>
+        <div class="rsv-progress"><span class="rsv-step" id="rsvStepLabel">Schritt 1 von 2</span><button type="button" class="rsv-back" id="rsvBack">← Zurück</button></div>
+
+        <div class="rsv-view" data-step="1">
+          <h2 class="rsv-h">Was möchtest du?</h2>
+          <div class="rsv-row">
+            <div><div class="rsv-row__name">Kategorie 1 · Eintritt</div><div class="rsv-row__sub">inkl. Afterparty</div><div class="rsv-row__price">35&nbsp;€</div></div>
+            <div class="rsv-stepper" data-key="k1"><button type="button" data-d="-1" aria-label="Kategorie 1 weniger">−</button><output id="rsvOut-k1">1</output><button type="button" data-d="1" aria-label="Kategorie 1 mehr">+</button></div>
+          </div>
+          <div class="rsv-row" id="rsvRowK2">
+            <div><div class="rsv-row__name">Kategorie 2 · Tischplatz</div><div class="rsv-row__sub">inkl. Abendessen, Eintritt &amp; Afterparty · nur bis 8.&nbsp;11.</div><div class="rsv-row__price">73&nbsp;€</div></div>
+            <div class="rsv-stepper" data-key="k2"><button type="button" data-d="-1" aria-label="Tischplatz weniger">−</button><output id="rsvOut-k2">0</output><button type="button" data-d="1" aria-label="Tischplatz mehr">+</button></div>
+          </div>
+          <div class="rsv-row" id="rsvRowSh">
+            <div><div class="rsv-row__name">Shuttle</div><div class="rsv-row__sub">Zentrum für Visionen → Hanuschplatz &amp; Hauptbahnhof, 01:00 &amp; 01:45&nbsp;Uhr</div><div class="rsv-row__price">5&nbsp;€</div></div>
+            <div class="rsv-stepper" data-key="sh"><button type="button" data-d="-1" aria-label="Shuttle weniger">−</button><output id="rsvOut-sh">0</output><button type="button" data-d="1" aria-label="Shuttle mehr">+</button></div>
+          </div>
+          <div class="rsv-total"><span>Gesamt</span><span id="rsvTotal">35&nbsp;€</span></div>
+          <p class="rsv-note">Du zahlst am Ballabend an der Abendkasse, bar oder mit Karte.</p>
+          <button type="button" class="btn btn--primary rsv-next" id="rsvNext">Weiter</button>
+        </div>
+
+        <div class="rsv-view" data-step="2" hidden>
+          <h2 class="rsv-h">Auf wen reservieren wir?</h2>
+          <p class="rsv-note">Die Karten liegen an der Abendkasse auf diesen Namen bereit. Bitte so, wie er auf deinem Ausweis steht.</p>
+          <div class="rsv-names">
+            <div><label class="rsv-label" for="rsvFirst">Vorname</label><input class="rsv-input" type="text" id="rsvFirst" autocomplete="given-name" maxlength="60" required></div>
+            <div><label class="rsv-label" for="rsvLast">Nachname</label><input class="rsv-input" type="text" id="rsvLast" autocomplete="family-name" maxlength="60" required></div>
+          </div>
+          <p class="rsv-label rsv-label--sub">Wie erreichen wir dich bei Rückfragen?</p>
+          <div class="rsv-seg" role="radiogroup" aria-label="Kontaktweg">
+            <button type="button" role="radio" aria-checked="true" data-ch="mail">E-Mail</button>
+            <button type="button" role="radio" aria-checked="false" data-ch="wa">WhatsApp</button>
+            <button type="button" role="radio" aria-checked="false" data-ch="ig">Instagram</button>
+          </div>
+          <label class="rsv-label" for="rsvContact"><span id="rsvContactLabel">Deine E-Mail-Adresse</span></label>
+          <input class="rsv-input" type="email" id="rsvContact" autocomplete="email" maxlength="120" placeholder="name@beispiel.at">
+          <div class="rsv-msg">
+            <label class="rsv-label" for="rsvMessage">Zusätzliche Infos <span class="rsv-optional">(optional)</span></label>
+            <span class="rsv-msg__hint" id="rsvMessageHint">Zum Beispiel, wenn jemand anderes die Karten für dich abholt.</span>
+            <textarea class="rsv-input rsv-textarea" id="rsvMessage" rows="3" maxlength="500" aria-describedby="rsvMessageHint" placeholder="Meine Freundin Lena Huber holt die Karten ab."></textarea>
+            <span class="rsv-count" id="rsvCount" aria-live="polite">0 / 500</span>
+          </div>
+          <div class="rsv-hp" aria-hidden="true">
+            <label for="rsvWebsite">Website</label>
+            <input type="text" id="rsvWebsite" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="rsv-check" for="rsvConsent">
+            <input type="checkbox" id="rsvConsent">
+            <span>Ich bin einverstanden, dass das Ballkomitee mich über diesen Weg wegen meiner Reservierung kontaktiert. Mehr dazu im <a href="impressum.html#datenschutz">Datenschutz</a>.</span>
+          </label>
+          <p class="rsv-error" id="rsvError" role="alert"></p>
+          <button type="submit" class="btn btn--primary rsv-next" id="rsvSubmit" disabled>Reservierung abschicken</button>
+        </div>
+      </form>
+
+      <!-- Bestätigung (animiert) -->
+      <div class="rsv-done" id="rsvDone" hidden>
+        <div class="rsv-checkmark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 12.5l3.6 3.6L17.5 8.7"/></svg></div>
+        <h2 class="rsv-done__title" tabindex="-1" id="rsvDoneTitle">Reservierung bestätigt!</h2>
+        <p class="rsv-done__name" id="rsvDoneName"></p>
+        <span class="rsv-done__label">Deine Reservierungsnummer</span>
+        <div class="rsv-number" id="rsvNumber"><span id="rsvCode"></span></div>
+        <button type="button" class="rsv-copy" id="rsvCopy">Nummer kopieren</button>
+
+        <div class="rsv-info">
+          <p id="rsvDoneLead"></p>
+          <p>Nenn an der Abendkasse <b>deine Reservierungsnummer</b> und zeig deinen <b>Lichtbildausweis</b>. Du zahlst dort, bar oder mit Karte, und bekommst deine Karten.</p>
+          <p>Speichere die Bestätigung als PDF oder mach einen Screenshot, dann hast du alles am Handy dabei.</p>
+          <p id="rsvContactNote"></p>
+        </div>
+
+        <dl class="rsv-done__list" id="rsvSummary"></dl>
+
+        <div class="rsv-done__actions">
+          <button type="button" class="btn btn--primary" id="rsvPrint">Als PDF speichern</button>
+          <a class="btn btn--ghost" href=".">Zur Startseite</a>
+        </div>
+      </div>
+
+      <!-- Nur für „Als PDF speichern“: eigene Druckseite -->
+      <div class="rsv-print" id="rsvPrintDoc" aria-hidden="true">
+        <div class="rsv-print__head">
+          <img src="assets/logo-mail.png" alt="Carpe Noctem, Herz-Jesu Ball" width="160">
+          <div class="rsv-print__headtext">
+            <span>Abendkasse-Reservierung</span>
+            <span>Herz-Jesu Ball 2026 · Samstag, 21. November 2026</span>
+          </div>
+        </div>
+        <div class="rsv-print__body">
+          <span class="rsv-print__name" id="rsvPrintName"></span>
+          <div class="rsv-print__codewrap">
+            <div>
+              <span class="rsv-print__label">Reservierungsnummer</span>
+              <span class="rsv-print__code" id="rsvPrintCode"></span>
+            </div>
+          </div>
+          <table class="rsv-print__table"><tbody id="rsvPrintRows"></tbody></table>
+          <div class="rsv-print__box">
+            <strong>An der Abendkasse</strong>
+            <p>Nenn deine Reservierungsnummer und zeig deinen Lichtbildausweis. Du zahlst dort den Vorverkaufspreis, bar oder mit Karte, und bekommst deine Karten.</p>
+            <p id="rsvPrintContact"></p>
+          </div>
+        </div>
+        <div class="rsv-print__foot">
+          <span>Zentrum für Visionen · Urstein Nord 24, 5412 Puch-Urstein · Einlass ab 19:00 Uhr</span>
+          <span>Ballkomitee am PG der Herz-Jesu-Missionare 11/26 · Schönleitenstraße 1, 5020 Salzburg · herzjesuball.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <img class="footer__logo" src="assets/logo.webp" alt="" width="900" height="696">
+      <p class="footer__tag">»Acht Jahre, eine Nacht« · Samstag, 21. November 2026</p>
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/herzjesuballmj27/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.17.4.37 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.17-1 .37-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.17-.4-.37-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.17 1-.37 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-.9.04-1.4.2-1.7.32-.4.16-.7.35-1 .65-.3.3-.5.6-.65 1-.12.3-.28.8-.32 1.7C3.6 8.5 3.6 8.9 3.6 12s0 3.5.07 4.7c.04.9.2 1.4.32 1.7.16.4.35.7.65 1 .3.3.6.5 1 .65.3.12.8.28 1.7.32 1.2.07 1.6.07 4.7.07s3.5 0 4.7-.07c.9-.04 1.4-.2 1.7-.32.4-.16.7-.35 1-.65.3-.3.5-.6.65-1 .12-.3.28-.8.32-1.7.07-1.2.07-1.6.07-4.7s0-3.5-.07-4.7c-.04-.9-.2-1.4-.32-1.7-.16-.4-.35-.7-.65-1-.3-.3-.6-.5-1-.65-.3-.12-.8-.28-1.7-.32C15.5 4 15.1 4 12 4zm0 3.06A4.94 4.94 0 1 0 12 17a4.94 4.94 0 0 0 0-9.88zm0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@herzjesuball" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3v11.9a2.4 2.4 0 1 1-1.7-2.3V9.5a5.4 5.4 0 1 0 4.7 5.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg>
+        </a>
+      </div>
+      <nav class="footer__nav" aria-label="Fußzeile">
+        <a href=".">Start</a>
+        <a href="infos.html">Infos &amp; FAQ</a>
+        <a href="ablauf.html">Ablauf</a>
+        <a href="location.html">Location &amp; Anreise</a>
+        <a href="komitee.html">Komitee</a>
+        <a href="sponsoren.html">Sponsoren</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="impressum.html#datenschutz">Datenschutz</a>
+        <a href="mailto:support@herzjesuball.com">Kontakt</a>
+      </nav>
+      <p class="footer__copy">© <span data-year>2026</span> Ballkomitee am PG der Herz-Jesu Missionare · Privatgymnasium Herz-Jesu Salzburg</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=7"></script>
+  <script src="js/reservieren.js?v=9"></script>
+</body>
+</html>
